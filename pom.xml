@@ -25,7 +25,6 @@
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
-
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-dependencies</artifactId>
@@ -34,27 +33,41 @@
             <scope>import</scope>
         </dependency>
 
+        <!-- 引入freeMarker的依赖包. -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
         </dependency>
 
-        <!-- 引入freeMarker的依赖包. -->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-freemarker</artifactId>-->
-<!--        </dependency>-->
+        <!--分布式事务-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jta-atomikos</artifactId>
+        </dependency>
 
-<!--        &lt;!&ndash;分布式事务&ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-jta-atomikos</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-jdbc</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.5.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.27</version>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -73,24 +86,10 @@
             <scope>test</scope>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.projectlombok</groupId>-->
-<!--            <artifactId>lombok</artifactId>-->
-<!--            <version>RELEASE</version>-->
-<!--            <scope>compile</scope>-->
-<!--        </dependency>-->
-<!--        &lt;!&ndash; https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>com.baomidou</groupId>-->
-<!--            <artifactId>mybatis-plus-boot-starter</artifactId>-->
-<!--            <version>3.5.1</version>-->
-<!--        </dependency>-->
-
-<!--        <dependency>-->
-<!--            <groupId>mysql</groupId>-->
-<!--            <artifactId>mysql-connector-java</artifactId>-->
-<!--            <version>8.0.27</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
